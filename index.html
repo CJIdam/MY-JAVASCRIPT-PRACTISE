@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> </head>
+  <body>
+    <img name="slide" width="100%" height="500px" />
+    <script>
+      var i = 0;
+      var images = [];
+      var time = 3000;
+      images[0] = "Images/download.jpg";
+      images[1] = "Images/istockphoto-1326417862-170667a.jpg";
+      images[2] = "Images/photo-1560365163-3e8d64e762ef.jpg";
+      function changeImg() {
+        document.slide.src = images[i];
+
+        if (i < images.length - 1) {
+          i++;
+        } else {
+          i = 0;
+        }
+        setTimeout("changeImg()", time);
+      }
+      window.onload = changeImg;
+    </script>
+  </body>
+</html>
